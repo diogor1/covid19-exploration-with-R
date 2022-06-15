@@ -81,7 +81,19 @@ ggplot(bike, aes(x = Home.Owner, y = Gender, fill = Gender)) +
   theme_classic()
 # from the graph, the male gender are the dominant home owners. 
 
-ggplot(bike, aes(x = Home.Owner, fill =Gender )) +
+ggplot(bike, aes(x = Occupation, fill =Region )) +
   geom_bar(position = position_dodge()) +
   theme_classic()
-#using the barplot, the male still maintained the lead in owning the homes.
+#using the bar plot, the male still maintained the lead in owning the homes.
+
+#next we measure the regions and the occupation they are more specialized. 
+#North America, has all the professional, skilled and management skills and pay. 
+#this is followed by the European and then the Pacific.
+ggplot(bike, aes(x = Occupation, fill =Region )) +
+  geom_bar(position = position_dodge()) +
+  theme_classic()
+#we also measure the region with highest number of cars: the North America has the highest number
+#followed by the Europeans and then the Pacific.
+ggplot(bike, aes(x = Cars, fill =Region )) +
+  geom_bar(position = position_dodge()) +
+  theme_classic()
